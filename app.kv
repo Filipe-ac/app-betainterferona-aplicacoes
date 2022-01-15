@@ -1,0 +1,76 @@
+<box>:
+    BoxLayout:
+        orientation: 'horizontal'
+        
+        Image: #Para a figura
+            source: 'fig.png'
+
+        BoxLayout: #Para o resto]
+            orientation: 'vertical'
+
+            BoxLayout: #Data, local aplicacao
+                orientation: 'vertical'
+                
+                Label:
+                    text: root.data()
+
+            BoxLayout:
+                orientation: 'horizontal'
+
+                Label:
+                    text: 'Local de aplicacao'
+                Label: #local aplicacao
+                    id: local_aplicacao_label
+
+                    
+            BoxLayout: #Botoes
+                Button:
+                    text: 'Aplicar'
+                    on_release: root.insere_aplicacao()
+                    
+
+            
+            BoxLayout: #Para as colunas de historico e proximos
+                orientation: 'horizontal'
+
+                BoxLayout:
+                    orientation: 'vertical'
+                    size_hint_x: None
+                    width: 300
+                    Label:
+                        size_hint_y: None
+                        height: 20
+                        text: 'Historico'
+
+                    ScrollView:
+                        orientation: 'vertical'
+                        BoxLayout:
+                            size_hint_y: None
+                            height: self.minimum_height
+                            orientation: 'vertical'
+                            id: scroll_antigos
+
+                BoxLayout:
+                    orientation: 'vertical'
+                    Label:
+                        size_hint_y: None
+                        height: 20
+                        text: 'Proximos'
+
+                    ScrollView:
+                        orientation: 'vertical'
+                        BoxLayout:
+                            size_hint_y: None
+                            height: self.minimum_height
+                            orientation: 'vertical'
+                            id: scroll_proximos
+                    
+
+
+<antigos>:
+
+    orientation: 'horizontal'
+    Label:
+        id: valor_antigo
+
+                  
