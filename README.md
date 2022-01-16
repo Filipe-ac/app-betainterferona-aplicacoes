@@ -22,3 +22,5 @@ A interface tipica é como na figura abaixo:
 ![image](https://user-images.githubusercontent.com/78453361/149637819-feb0d025-0357-439e-ad1e-bf562c756435.png)
 
 Para modificar o local de aplicação, basta clicar no botão desejado na coluna 'Proximos' 
+
+Para salvar a aplicação, clicar no botão 'aplicar' e fechar o programa
